@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1111,2933</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1111,2811</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>REFTestCase_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -112,7 +112,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Verify if the Process workflow works as expected.&#xA;The verification should check whether the output of the Process workflow is the expected one.&#xD;&#xA;&#xD;&#xA;OJO CUIDAO: NO PUEDO EJECUTAR EL PROCESS.XAML COMO TAL, YA QUE REQUIERE que el TransactionItem sea de tipo &quot;QueueItem&quot;. Al usar una Test Queue el argumento que este nos da NO es de tipo &quot;QueueItem&quot; sino de tipo IDictionary&lt;String, Object&gt;" DisplayName="ProcessTestCase | DATA DRIVEN CASE" sap:VirtualizedContainerService.HintSize="754,2868" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Verify if the Process workflow works as expected.&#xA;The verification should check whether the output of the Process workflow is the expected one.&#xA;&#xA;OJO CUIDAO: NO PUEDO EJECUTAR EL PROCESS.XAML COMO TAL, YA QUE REQUIERE que el TransactionItem sea de tipo &quot;QueueItem&quot;. Al usar una Test Queue el argumento que este nos da NO es de tipo &quot;QueueItem&quot; sino de tipo IDictionary&lt;String, Object&gt;" DisplayName="ProcessTestCase | DATA DRIVEN CASE" sap:VirtualizedContainerService.HintSize="754,2746" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="ui:QueueItem" Name="TransactionItem" />
@@ -125,33 +125,25 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - ProcessTestCase" sap:VirtualizedContainerService.HintSize="692,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ProcessTestCase started.&quot;]" />
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="692,683" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="692,561" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
           <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllApplications workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllApplications workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
-        <Assign.To>
-          <OutArgument x:TypeArguments="ui:QueueItem">[TransactionItem]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="ui:QueueItem">[new QueueItem()]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
@@ -176,7 +168,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
@@ -222,15 +214,9 @@
             <ui:Comment sap:VirtualizedContainerService.HintSize="388,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Habría que validar el input y manejar las business exceptions aquí también" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UiDemo_AddTransaction.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="UiDemo_AddTransaction.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:Decimal" x:Key="in_CashIn">
-                  <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="Convert.ToDecimal(uiDemo_Test(&quot;CashIn&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Decimal" x:Key="in_OnUsCheck">
-                  <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="Convert.ToDecimal(uiDemo_Test(&quot;OnUsCheck&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Decimal" x:Key="in_NotOnUsCheck">
-                  <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="Convert.ToDecimal(uiDemo_Test(&quot;NotOnUsCheck&quot;))" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:Decimal" x:Key="in_CashIn">[Convert.ToDecimal(uiDemo_Test("CashIn"))]</InArgument>
+                <InArgument x:TypeArguments="x:Decimal" x:Key="in_OnUsCheck">[Convert.ToDecimal(uiDemo_Test("OnUsCheck"))]</InArgument>
+                <InArgument x:TypeArguments="x:Decimal" x:Key="in_NotOnUsCheck">[Convert.ToDecimal(uiDemo_Test("NotOnUsCheck"))]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionNumber" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>

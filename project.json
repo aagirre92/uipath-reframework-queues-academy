@@ -73,17 +73,24 @@
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "48e0f291-4d04-47ee-9c8a-200d9ad6761a",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\ProcessTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
         "testCaseId": "794e289e-163d-4283-9af1-7bb8ed93c38a",
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "48e0f291-4d04-47ee-9c8a-200d9ad6761a",
+        "dataVariationFilePath": ".variations\\ UiDemo-Test.json",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\TC-ProcessSuccessTestCases_TestQueue.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "340b8990-986c-4ed1-bffe-437db5915a7f",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\ProcessTestCase.xaml"
       }
     ],
     "modernBehavior": true,

@@ -29,6 +29,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Testing</x:String>
       <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "UiDemo schema",
+  "description": "Transaction schema",
+  "type": "object",
+  "properties": {
+    "CashIn": {
+      "description": "cash in",
+      "type": "number"
+    },
+    "OnUsCheck": {
+      "description": "OnUsCheck",
+      "type": "number"
+    },
+    "NotOnUsCheck": {
+      "description": "NotOnUsCheck",
+      "type": "number"
+    }
+  },
+  "required": [ "CashIn", "OnUsCheck", "NotOnUsCheck" ]
+}
